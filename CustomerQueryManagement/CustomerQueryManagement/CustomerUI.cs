@@ -123,37 +123,48 @@ namespace CustomerQueryManagement
 
         private void dequeueButton_Click(object sender, EventArgs e)
         {
-
+            int i = 0;
             string connection = @"Data Source= (LOCAL)\SQLEXPRESS; Database = Customer DB; Integrated Security = true";
-            SqlConnection Connection = new SqlConnection(connection);
-            Connection.Open();
-            string newquery = "SELECT * FROM tCustomers WHERE CustomerSerial = '" +CustomerStatus.On_Served+"';";
-            SqlCommand newcommand = new SqlCommand(newquery, Connection);
-            SqlDataReader reader = newcommand.ExecuteReader();
-
-            List<Customer> customers = new List<Customer>();
-           
-           
-            while (reader.Read())
+            using (SqlConnection Connection = new SqlConnection(connection))
             {
-                Customer aCustomer = new Customer();
-                aCustomer.serialNo = reader["SerialNo"].ToString();
-                aCustomer.name = reader["CustomerName"].ToString();
-                aCustomer.complain = reader["CustomerComplain"].ToString();
-                aCustomer.status = reader["CustomerSerial"].ToString();
 
-                customers.Add(aCustomer);
-            
+                Connection.Open();
+                string newquery = "UPDATE tCustomers SET CustomerSerial = '" + CustomerStatus.On_Served +
+                                  "' WHERE SerialNo = (SELECT MIN (SerialNo)+"+i+" FROM tCustomers);";
+                using (SqlCommand newcommand = new SqlCommand(newquery, Connection))
+                {
+                    newcommand.ExecuteNonQuery();
+                }
 
-            
+                i++;
+                string query = "SELECT* FROM tCustomers WHERE CustomerSerial = '" + CustomerStatus.On_Served + "' UPDATE tCustomers SET CustomerSerial = '"+CustomerStatus.Served+"'WHERE CustomerSerial = '"+CustomerStatus.On_Served+"';";
+                using (SqlCommand command = new SqlCommand(query, Connection))
+                {
                 
+                SqlDataReader reader = command.ExecuteReader();
 
-            serialDequeueTextBox.Text = aCustomer.serialNo;
-            nameDequeueTextBox.Text = aCustomer.name;
-            complainDequeueTextBox.Text = aCustomer.complain;
-            customerListView.Items.RemoveAt(0);
+            
+            //List<Customer> customers = new List<Customer>();
+
+            customerListView.Items.Clear();
+                    while (reader.Read())
+                    {
+                        Customer aCustomer = new Customer();
+                        aCustomer.serialNo = reader["SerialNo"].ToString();
+                        aCustomer.name = reader["CustomerName"].ToString();
+                        aCustomer.complain = reader["CustomerComplain"].ToString();
+                        aCustomer.status = reader["CustomerSerial"].ToString();
+
+                   
+
+                    serialDequeueTextBox.Text = aCustomer.serialNo;
+                        nameDequeueTextBox.Text = aCustomer.name;
+                        complainDequeueTextBox.Text = aCustomer.complain;
+                        customerListView.Items.RemoveAt(0);
+                    }
+                }
+                Connection.Close();
             }
-            Connection.Close();
         }
         }
     }

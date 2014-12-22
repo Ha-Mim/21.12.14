@@ -16,3 +16,12 @@ D:\asp.net\21_12_2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\
 D:\asp.net\21_12_2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.CustomerUI.resources
 D:\asp.net\21_12_2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.Properties.Resources.resources
 D:\asp.net\21_12_2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.csproj.GenerateResource.Cache
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\bin\Debug\CustomerQueryManagement.exe.config
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.exe
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.pdb
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\bin\Debug\CustomerQueryManagement.exe
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\bin\Debug\CustomerQueryManagement.pdb
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.csprojResolveAssemblyReference.cache
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.CustomerUI.resources
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.Properties.Resources.resources
+D:\asp.net\21.12.2014\CustomerQueryManagement\CustomerQueryManagement\obj\Debug\CustomerQueryManagement.csproj.GenerateResource.Cache
