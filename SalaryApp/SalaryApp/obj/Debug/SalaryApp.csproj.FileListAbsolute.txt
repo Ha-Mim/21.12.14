@@ -1,0 +1,9 @@
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\bin\Debug\SalaryApp.exe.config
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\bin\Debug\SalaryApp.exe
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\bin\Debug\SalaryApp.pdb
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\obj\Debug\SalaryApp.csprojResolveAssemblyReference.cache
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\obj\Debug\SalaryApp.Properties.Resources.resources
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\obj\Debug\SalaryApp.SalaryUI.resources
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\obj\Debug\SalaryApp.csproj.GenerateResource.Cache
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\obj\Debug\SalaryApp.exe
+D:\asp.net\21_12_2014\SalaryApp\SalaryApp\obj\Debug\SalaryApp.pdb
