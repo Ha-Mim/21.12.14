@@ -52,6 +52,7 @@
             this.remainingLabel = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.servedLabel = new System.Windows.Forms.Label();
+            this.serviceButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // columnHeader2
@@ -249,11 +250,22 @@
             this.servedLabel.TabIndex = 35;
             this.servedLabel.Text = "\"\"";
             // 
+            // serviceButton
+            // 
+            this.serviceButton.Location = new System.Drawing.Point(516, 135);
+            this.serviceButton.Name = "serviceButton";
+            this.serviceButton.Size = new System.Drawing.Size(75, 23);
+            this.serviceButton.TabIndex = 36;
+            this.serviceButton.Text = "Service Start";
+            this.serviceButton.UseVisualStyleBackColor = true;
+            this.serviceButton.Click += new System.EventHandler(this.serviceButton_Click);
+            // 
             // CustomerUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 513);
+            this.Controls.Add(this.serviceButton);
             this.Controls.Add(this.servedLabel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.remainingLabel);
@@ -308,6 +320,7 @@
         private System.Windows.Forms.Label remainingLabel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label servedLabel;
+        private System.Windows.Forms.Button serviceButton;
     }
 }
 
